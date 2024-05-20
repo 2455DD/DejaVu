@@ -15,7 +15,7 @@ TOPK=5000
 ATTN_TOPK_1=24
 ATTN_TOPK_2=48
 
-ARGS="--model-name /lustre/fsw/nvresearch/ldm/diffusion/checkpoint/opt-175b-new \
+ARGS="--model-name /content/checkpoint/opt-175b-new \
 --model-type opt-ml-att-sparse \
 --seed 42 \
 --fp16 \

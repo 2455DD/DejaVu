@@ -3,7 +3,7 @@ file=./c4_train/c4_train.jsonl
     
 echo "start running ${file}"
 
-ARGS="--model-name /lustre/fsw/nvresearch/ldm/diffusion/checkpoint/opt-175b-new \
+ARGS="--model-name /content/checkpoint/opt-175b-new \
 --model-type opt-save \
 --seed 42 \
 --fp16 \
