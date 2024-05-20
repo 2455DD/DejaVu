@@ -14,7 +14,7 @@ ARGS="--model-name facebook/opt-1.3b \
 --num-iters 2000 \
 --dist-url tcp://127.0.0.1:9032 \
 --token-micro-batch-size 1 \
---world-size 1 --pipeline-group-size 8 --data-group-size 1 \
+--world-size 1 --pipeline-group-size 1 --data-group-size 1 \
 --pp-mode pipe_sync_sample_mask_token_pipe \
 --infer-data ${file}"
 
