@@ -15,11 +15,14 @@ DATA = {
     },
     "30b": {
         "c4": "../data/30b_c4",
+    },
+    "1.7b":{
+        "c4": "../data/1_7b_c4",
     }
   
 }
 
-MODEL_CHOICES = ['175b', '66b', '30b']
+MODEL_CHOICES = ['175b', '66b', '30b','1.7b']
 DATA_CHOICES = ['c4']
 CONFIG = {
     '175b':{
@@ -42,6 +45,13 @@ CONFIG = {
         'd':2048,
         'h': 32,
         'N':400000,
+    },
+    '1.7b':{
+        'num_layer': 24,
+        'ckt_storage': "bylayer",
+        'd':2048,
+        'h': 32,
+        'N':400000,       
     },
 }
 
