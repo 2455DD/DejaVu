@@ -30,8 +30,8 @@ def main():
         metavar="S",
         help="whether overwrite_request_args",
     )
-    # parser.add_argument('--model-name', type=str, default='./pretrained_models/gpt2', metavar='S',
-    #                     help='trained model path')
+    parser.add_argument('--model-name', type=str, default='./pretrained_models/gpt2', metavar='S',
+                        help='trained model path')
     # parser.add_argument('--model-type', type=str, default='gpt2', metavar='S',
     #                     help='trained model path')
     # parser.add_argument('--infer-data', type=str, default='', metavar='S',
