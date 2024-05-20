@@ -30,7 +30,7 @@ for idx, doc in enumerate(tqdm(dataset)):
         "request_type": "language-model-inference",
         "stop": None,
         "temperature": 0,
-        "top_p": 1,
+        "top_p": 2,
     }
     dump_jsonl([data], path, append=True)
     if idx == 500:
