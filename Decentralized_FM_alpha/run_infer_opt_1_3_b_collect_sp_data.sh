@@ -1,5 +1,5 @@
 
-file=c4_train/c4_train.jsonl
+file=./c4_train/c4_train.jsonl
     
 echo "start running ${file}"
 # Budget应该是指计算代价(P3)，但怎么2确定
@@ -14,9 +14,9 @@ ARGS="--model-name facebook/opt-1.3b \
 --num-iters 2000 \
 --dist-url tcp://127.0.0.1:9032 \
 --token-micro-batch-size 1 \
---world-size 8 --pipeline-group-size 8 --data-group-size 1 \
+--world-size 1 --pipeline-group-size 8 --data-group-size 1 \
 --pp-mode pipe_sync_sample_mask_token_pipe \
---infer-data ./c4_train/c4_train.jsonl"
+--infer-data ${file}"
 
 
 # Multiple GPUs code
