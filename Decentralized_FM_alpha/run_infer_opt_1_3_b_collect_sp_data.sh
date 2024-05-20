@@ -1,5 +1,5 @@
 
-file=./c4_train/c4_train.jsonl
+file=c4_train/c4_train.jsonl
     
 echo "start running ${file}"
 # Budget应该是指计算代价(P3)，但怎么2确定
