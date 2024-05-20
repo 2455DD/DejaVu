@@ -16,7 +16,7 @@ ARGS="--model-name facebook/opt-1.3b \
 --token-micro-batch-size 1 \
 --world-size 8 --pipeline-group-size 8 --data-group-size 1 \
 --pp-mode pipe_sync_sample_mask_token_pipe \
---infer-data ${file}"
+--infer-data ./c4_train/c4_train.jsonl"
 
 
 # Multiple GPUs code
