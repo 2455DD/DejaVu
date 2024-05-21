@@ -4,7 +4,7 @@ output_file=../lm-eval-harness-adapter/output_wsc.jsonl
 
 echo "start running ${file}"
 
-ARGS="--model-name /content/checkpoint/opt-175b-new \
+ARGS="--model-name ../data/checkpoint/opt-175b-new \
 --model-type opt \
 --seed 42 \
 --fp16 \

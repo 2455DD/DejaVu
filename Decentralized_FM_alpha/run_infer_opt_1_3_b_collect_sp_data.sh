@@ -4,7 +4,7 @@ file=./c4_train/c4_train.jsonl
 echo "start running ${file}"
 # Budget应该是指计算代价(P3)，但怎么2确定
 
-ARGS="--model-name facebook/opt-1.3b \
+ARGS="--model-name ../data/pretrained_models/opt-1.3b \
 --model-type opt-save \
 --seed 42 \
 --fp16 \

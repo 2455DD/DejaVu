@@ -417,7 +417,7 @@ class GPTBlock(OPTDecoderLayer):
         module.self_attn.layer_index = layer_index
         module.fp_i = 0
         module.fp_mlp_query = np.memmap(
-            f"/content/data/1_3b_c4/mlp_sp_x_{module.layer_index}.mmap",
+            f"/home/cannedfish/source/github/DejaVu/data/mmaps/data/1_3b_c4/mlp_sp_x_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(
@@ -426,7 +426,7 @@ class GPTBlock(OPTDecoderLayer):
             ),
         )
         module.fp_att_query = np.memmap(
-            f"/content/data/1_3b_c4/att_sp_x_{module.layer_index}.mmap",
+            f"/home/cannedfish/source/github/DejaVu/data/mmaps/data/1_3b_c4/att_sp_x_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(
@@ -435,7 +435,7 @@ class GPTBlock(OPTDecoderLayer):
             ),
         )
         module.fp_label = np.memmap(
-            f"/content/visualization/1_3b/mlp_label_{module.layer_index}.mmap",
+            f"/home/cannedfish/source/github/DejaVu/data/mmaps/visualization/1_3b/mlp_label_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(
@@ -445,7 +445,7 @@ class GPTBlock(OPTDecoderLayer):
         )
         module.self_attn.fp_i = 0
         module.self_attn.fp_label = np.memmap(
-            f"/content/visualization/1_3b/score_norm_{module.layer_index}.mmap",
+            f"/home/cannedfish/source/github/DejaVu/data/mmaps/visualization/1_3b/score_norm_{module.layer_index}.mmap",
             dtype="float16",
             mode="w+",
             shape=(
