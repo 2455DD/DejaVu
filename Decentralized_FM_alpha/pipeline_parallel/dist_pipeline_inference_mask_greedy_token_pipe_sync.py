@@ -628,19 +628,19 @@ class DistGreedyInferenceMaskTokenPipeSync(DistGreedyInferenceTokePipeSync):
     def forward_seq_pipeline_stage(self, input_data=None, attention_mask=None):
         if self.pp_rank == 0 or self.pp_rank == self.pipeline_group_size - 1:
             assert input_data is not None
-            if self.pp_rank == 0 and self.generate_seq_length == 0:
-                # input reduce 1 for first node
-                input_data = input_data[:, :-1]
-
+            # if self.pp_rank == 0 and self.generate_seq_length == 0:
+            #     # input reduce 1 for first node
+            #     input_data = input_data[:, :-1]
+        # FIXME: 输入的张量被这段附近的代码给缩减了，
         if input_data is not None:
             input_seqs = torch.chunk(input_data, self.seq_num, dim=0)
         else:
             input_seqs = [None] * self.seq_num
-
+   
         if attention_mask is not None:
-            if self.generate_seq_length == 0:
-                # attention reduce 1
-                attention_mask = attention_mask[:, :-1]
+            # if self.generate_seq_length == 0:
+            #     # attention reduce 1
+            #     attention_mask = attention_mask[:, :-1]
             attention_mask = torch.chunk(attention_mask, self.seq_num, dim=0)
         else:
             attention_mask = [None] * self.seq_num

@@ -12,5 +12,6 @@
 /Decentralized_FM_alpha/unit_tests/tmp_executable_64/*
 /Decentralized_FM_alpha/c4_train/*.jsonl
 /Decentralized_FM_alpha/**/*.pyc
+**/*.pyc
 /data/**
 .vscode/**
