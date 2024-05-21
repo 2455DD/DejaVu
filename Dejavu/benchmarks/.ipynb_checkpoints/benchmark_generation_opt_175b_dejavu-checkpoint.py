@@ -34,7 +34,7 @@ parser.add_argument(
 parser.add_argument(
     "--mlp-sparse-path",
     type=str,
-    default="/content/checkpoint/opt-175b-sparse-predictor/",
+    default="../data/checkpoint/opt-175b-sparse-predictor/",
 )
 args = parser.parse_args()
 
